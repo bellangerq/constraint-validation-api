@@ -1,5 +1,7 @@
 # Playing with the Constraint validation API
 
+Read the [dedicated blog post](https://quentin-bellanger.com/blog/constraint-validation-api/) to learn more.
+
 ## Development
 
 Launch local server:
