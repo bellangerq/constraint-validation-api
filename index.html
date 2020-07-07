@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Constraint Validation API</title>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<main>
+			<header>
+				<h1>Constraint validation API</h1>
+				<p>
+					Using the
+					<a
+						href="https://developer.mozilla.org/en-US/docs/Web/API/Constraint_validation"
+						>native validation API</a
+					>, we can:
+				</p>
+				<ul>
+					<li>
+						Sets a custom error message with <code>setCustomValidation()</code>.
+					</li>
+					<li>
+						Checks fields validation state with <code>checkValidity()</code>.
+					</li>
+					<li>
+						Listen for form submit and input change events to validate fields.
+					</li>
+				</ul>
+			</header>
+			<form>
+				<div class="form-group">
+					<label for="card-number">Card number (16 digits)</label>
+					<div class="visually-hidden" id="cardNumberError"></div>
+					<input
+						type="text"
+						name="cardNumber"
+						id="card-number"
+						pattern="[0-9]{16}"
+						maxlength="16"
+						required
+					/>
+				</div>
+
+				<div class="form-group">
+					<label for="card-date">Expiry date (MMYY)</label>
+					<div class="visually-hidden" id="expiryDateError"></div>
+					<input
+						type="text"
+						name="expiryDate"
+						id="card-date"
+						maxlength="4"
+						pattern="(0[1-9]|1[0-2])[0-9]{2}"
+						required
+					/>
+				</div>
+
+				<div class="form-group">
+					<label for="card-security">Security code (3 digits)</label>
+					<div class="visually-hidden" id="securityCodeError"></div>
+					<input
+						type="text"
+						name="securityCode"
+						pattern="[0-9]{3}"
+						maxlength="3"
+						id="card-security"
+						required
+					/>
+				</div>
+
+				<button type="submit">Subscribe</button>
+			</form>
+		</main>
+		<script src="./index.js"></script>
+	</body>
+</html>

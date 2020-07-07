@@ -1,0 +1,13 @@
+{
+	"name": "constraint-validation-api",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"scripts": {
+		"serve": "parcel index.html",
+		"build": "parcel build index.html"
+	},
+	"devDependencies": {
+		"cssnano": "^4.1.10"
+	}
+}
